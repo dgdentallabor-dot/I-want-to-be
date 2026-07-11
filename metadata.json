@@ -1,0 +1,6 @@
+{
+  "name": "I Want To Be Rich",
+  "description": "An honest, minimalist, and self-aware crowdfunding landing page celebrating pure financial ambition without the typical startup or charity noise.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shamelessly Honest</title>
+    <script>
+      // Intercept and silence benign WebSocket / Vite HMR errors in sandbox/container proxy environments
+      window.addEventListener('unhandledrejection', function(event) {
+        var reason = event.reason;
+        if (reason) {
+          var msg = typeof reason === 'string' ? reason : (reason.message || '');
+          var stack = reason.stack || '';
+          if (msg.indexOf('WebSocket') !== -1 || msg.indexOf('vite') !== -1 || stack.indexOf('vite') !== -1) {
+            event.preventDefault();
+            console.info('[HMR Sandbox] Suppressed benign WebSocket/Vite unhandled rejection');
+          }
+        }
+      });
+      window.addEventListener('error', function(event) {
+        var msg = event.message || '';
+        if (msg.indexOf('WebSocket') !== -1 || msg.indexOf('vite') !== -1) {
+          event.preventDefault();
+          console.info('[HMR Sandbox] Suppressed benign WebSocket/Vite error');
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
