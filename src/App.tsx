@@ -13,6 +13,7 @@ import ProgressReports from "./components/ProgressReports";
 import StretchGoals from "./components/StretchGoals";
 import WontFix from "./components/WontFix";
 import Final from "./components/Final";
+import FakeReviews from "./components/FakeReviews";
 import CutePig from "./components/CutePig";
 import SimulationModal from "./components/SimulationModal";
 import PrivacyModal from "./components/PrivacyModal";
@@ -165,6 +166,9 @@ export default function App() {
 
         {/* THINGS MONEY DEFINITELY WON'T FIX */}
         <WontFix />
+
+        {/* FAKE REVIEWS SECTION */}
+        <FakeReviews />
 
         {/* SECTION 5 - FINAL MESSAGE */}
         <Final onDonateClick={handleDonateClick} />
