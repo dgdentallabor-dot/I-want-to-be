@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { X, Copy, Check, AlertTriangle, Coins } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-import qrCodeImage from "../assets/images/IMG_7234.png";
+import qrCodeImage from "../assets/images/qr_code_base.png";
 
 interface CryptoModalProps {
   isOpen: boolean;
@@ -10,7 +10,7 @@ interface CryptoModalProps {
 
 export default function CryptoModal({ isOpen, onClose }: CryptoModalProps) {
   const [copied, setCopied] = useState(false);
-  const walletAddress = "PASTE_WALLET_ADDRESS_HERE";
+  const walletAddress = "0xC25c61120F5A392dC56D23FA5459699fAaB645D6";
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
