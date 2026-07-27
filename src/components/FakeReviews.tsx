@@ -20,7 +20,7 @@ const fakeReviews: Testimonial[] = [
     role: "Senior Psychiatrist",
     company: "Advanced Psychiatry Group",
     logo: Building2,
-    avatar: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=256&h=256&q=80",
+    avatar: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=256&h=256&q=80",
     rating: 4.0,
     quote: "I recommended this website to all my personalities. Four of them loved it. One is still writing an angry email.",
     tag: "Multiple Opinions Collected",
@@ -31,7 +31,7 @@ const fakeReviews: Testimonial[] = [
     role: "Digital Creator, Thought Leader & Person Holding Coffee",
     company: "Influence Without Talent LLC",
     logo: Zap,
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=256&h=256&q=80",
+    avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=256&h=256&q=80",
     rating: 5.0,
     quote: "I sent $1 and posted a crying video about how vulnerable the experience made me feel. Full story in my paid newsletter.",
     tag: "Emotion Successfully Monetized",
@@ -42,7 +42,7 @@ const fakeReviews: Testimonial[] = [
     role: "Chief Visionary Vision Officer",
     company: "Global Leadership Institute",
     logo: Command,
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=256&h=256&q=80",
+    avatar: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=256&h=256&q=80",
     rating: 4.9,
     quote: "I sent $1, scheduled six meetings about it, created a task force, and hired three consultants. We now estimate the total cost at $48,000.",
     tag: "Budget Under Review",
@@ -53,7 +53,7 @@ const fakeReviews: Testimonial[] = [
     role: "Senior Director of Future Results",
     company: "Campaign Promise Technologies",
     logo: Globe,
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=256&h=256&q=80",
+    avatar: `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="50" fill="%230f172a"/><circle cx="50" cy="50" r="42" fill="none" stroke="%23ffffff" stroke-width="2" stroke-dasharray="5 3"/><text x="50" y="42" font-family="monospace, sans-serif" font-weight="900" font-size="18" fill="%23ffffff" text-anchor="middle">100%</text><text x="50" y="66" font-family="system-ui, sans-serif" font-weight="900" font-size="24" fill="%23fbbf24" text-anchor="middle" letter-spacing="1">AI</text></svg>`,
     rating: 5.0,
     quote: "I promised to send $1 on day one. We are currently in year four and remain fully committed to beginning the discussion.",
     tag: "Delivery Expected Soon™",
@@ -64,7 +64,7 @@ const fakeReviews: Testimonial[] = [
     role: "High-Performance Wealth Mentor",
     company: "Luxury Mindset International",
     logo: Briefcase,
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=256&h=256&q=80",
+    avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=256&h=256&q=80",
     rating: 5.0,
     quote: "Poor people spend $1. Rich people invest $1. I know this because I rented a Lamborghini for the thumbnail.",
     tag: "Vehicle Returned at 6 PM",
@@ -145,7 +145,7 @@ export default function FakeReviews() {
                       src={item.avatar}
                       alt={item.name}
                       referrerPolicy="no-referrer"
-                      className="w-16 h-16 sm:w-18 sm:h-18 rounded-full object-cover border-2 border-neutral-100 shadow-xs group-hover:scale-105 transition-transform duration-300"
+                      className="w-16 h-16 sm:w-18 sm:h-18 rounded-full object-cover border-2 border-neutral-200 shadow-xs group-hover:scale-105 transition-all duration-300 filter grayscale contrast-125"
                     />
                     <div className="absolute -bottom-1 -right-1 bg-amber-400 text-neutral-900 rounded-full p-1 border-2 border-white shadow-xs">
                       <Quote className="h-3 w-3 fill-neutral-900" />
