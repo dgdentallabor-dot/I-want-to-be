@@ -64,7 +64,7 @@ const fakeReviews: Testimonial[] = [
     role: "High-Performance Wealth Mentor",
     company: "Luxury Mindset International",
     logo: Briefcase,
-    avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=256&h=256&q=80",
+    avatar: "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=256&h=256&q=80",
     rating: 5.0,
     quote: "Poor people spend $1. Rich people invest $1. I know this because I rented a Lamborghini for the thumbnail.",
     tag: "Vehicle Returned at 6 PM",
