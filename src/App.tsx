@@ -16,6 +16,7 @@ import Final from "./components/Final";
 import CutePig from "./components/CutePig";
 import SimulationModal from "./components/SimulationModal";
 import PrivacyModal from "./components/PrivacyModal";
+import CryptoModal from "./components/CryptoModal";
 
 export default function App() {
   const [stats, setStats] = useState<DonationStats>({
@@ -29,6 +30,7 @@ export default function App() {
     publishableKey: "",
   });
 
+  const [isCryptoOpen, setIsCryptoOpen] = useState(false);
   const [isSimulationOpen, setIsSimulationOpen] = useState(false);
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
   const [isProcessingRealStripe, setIsProcessingRealStripe] = useState(false);
@@ -99,46 +101,9 @@ export default function App() {
     }
   };
 
-  // Payment button handler
-  const handleDonateClick = async () => {
-    if (!stripeConfig.stripeEnabled) {
-      // Real Stripe is not configured. Fall back to simulation modal!
-      setIsSimulationOpen(true);
-      return;
-    }
-
-    // Real stripe flow
-    try {
-      setIsProcessingRealStripe(true);
-      const response = await fetch("/api/create-checkout-session", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-      });
-
-      if (!response.ok) {
-        throw new Error("API session creation failed");
-      }
-
-      const { sessionUrl, simulated } = await response.json();
-
-      if (simulated) {
-        // Redirection to the simulated checkout callback
-        window.location.href = sessionUrl;
-      } else if (sessionUrl) {
-        // Redirect user to Stripe's Hosted Checkout page
-        window.location.href = sessionUrl;
-      }
-    } catch (error) {
-      console.error("Checkout redirection failed:", error);
-      setToastMessage({
-        text: "Gateway Failure",
-        sub: "Stripe error occurred. Initializing simulated sandbox instead.",
-        type: "warning",
-      });
-      setIsSimulationOpen(true);
-    } finally {
-      setIsProcessingRealStripe(false);
-    }
+  // Main CTA button click handler (Opens Crypto Modal)
+  const handleDonateClick = () => {
+    setIsCryptoOpen(true);
   };
 
   // Callback when simulated checkout reports success
@@ -233,6 +198,12 @@ export default function App() {
           </div>
         </div>
       </footer>
+
+      {/* Crypto Donation Modal */}
+      <CryptoModal
+        isOpen={isCryptoOpen}
+        onClose={() => setIsCryptoOpen(false)}
+      />
 
       {/* Simulated Stripe Checkout Modal */}
       <SimulationModal

@@ -49,7 +49,7 @@ export default function Final({ onDonateClick }: FinalProps) {
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-sm bg-neutral-950 px-8 py-4.5 font-mono text-xs font-bold uppercase tracking-widest text-white hover:bg-neutral-900 transition-all duration-200 cursor-pointer active:scale-98 shadow-md border border-neutral-800"
           >
             <Heart className="h-3.5 w-3.5 text-rose-500 fill-rose-500 mr-0.5 animate-pulse" />
-            <span>Help A Stranger Chase A Completely Optional Dream</span>
+            <span>Send Me $1 in Crypto</span>
           </button>
         </div>
       </div>
