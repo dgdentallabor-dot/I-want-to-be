@@ -75,7 +75,7 @@ export default function Hero({ onDonateClick }: HeroProps) {
           {/* Sliding background layer */}
           <span className="absolute inset-0 bg-neutral-900 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0"></span>
           
-          <span className="relative z-10 text-left flex-1 pr-2 leading-relaxed font-mono text-sm uppercase tracking-wider font-bold">Send Me $1 in Crypto</span>
+          <span className="relative z-10 text-left flex-1 pr-2 leading-relaxed font-mono text-sm uppercase tracking-wider font-bold">Fund My Bad Decisions- $1 </span>
           <span className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-white text-neutral-950 group-hover:scale-105 transition-transform duration-300 shadow-sm">
             <ArrowRight className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-0.5" />
           </span>

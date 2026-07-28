@@ -80,13 +80,26 @@ export default function CryptoModal({ isOpen, onClose }: CryptoModalProps) {
 
             {/* Heading */}
             <h2 className="font-display text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
-              Send Me $1 in Crypto
+              Fund My Bad Decisions- $1 
             </h2>
 
             {/* Subheading */}
             <p className="mt-1.5 font-sans text-xs sm:text-sm text-neutral-400 font-light">
               Scan the QR code or copy the wallet address.
             </p>
+
+            {/* Crypto Disclaimer Text */}
+            <div className="mt-3.5 w-full bg-neutral-950/80 border border-neutral-800 rounded-xl p-3.5 text-center text-xs text-neutral-300 leading-relaxed font-sans space-y-1.5">
+              <p className="font-medium text-neutral-200">
+                This website has absolutely no interest in convincing you to buy crypto.
+              </p>
+              <p className="text-neutral-400 italic">
+                Come back when you accidentally own some.
+              </p>
+              <p className="font-semibold text-amber-400">
+                We'll still be here!
+              </p>
+            </div>
 
             {/* Network Label */}
             <div className="mt-4 inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/30 text-blue-400 font-mono text-xs font-semibold px-3.5 py-1.5 rounded-full">
